@@ -9,4 +9,5 @@ def generate_report(attachment, title, paragraph):
     styles = getSampleStyleSheet()
     report = SimpleDocTemplate(attachment)
     report_title = Paragraph(title,styles["h1"])
-    report.build([report_title, Paragraph(paragraph)])
+    empty_line = Spacer(1,20)
+    report.build([report_title,empty_line, Paragraph(paragraph),empty_line])
